@@ -1,0 +1,269 @@
+.feed {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  border-left: 1px solid rgb(239, 243, 244);
+  border-right: 1px solid rgb(239, 243, 244);
+  background-color: #fff;
+  overflow-y: auto;
+}
+
+.feed-header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgb(239, 243, 244);
+  z-index: 10;
+}
+
+.feed-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f1419;
+}
+
+.feed-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.feed-icons button {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  color: #1da1f2;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.feed-icons button:hover {
+  background-color: rgba(29, 161, 242, 0.1);
+}
+
+.compose-box {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  border-bottom: 1px solid rgb(239, 243, 244);
+}
+
+.compose-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #1da1f2;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.compose-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.compose-input {
+  width: 100%;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  resize: vertical;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  color: #0f1419;
+  background: transparent;
+}
+
+.compose-input::placeholder {
+  color: rgb(110, 118, 125);
+}
+
+.compose-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.compose-icons {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-btn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.2s;
+  border-radius: 50%;
+}
+
+.icon-btn:hover {
+  background-color: rgba(29, 161, 242, 0.1);
+}
+
+.post-button {
+  padding: 12px 32px;
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  background-color: #1da1f2;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.post-button:hover:not(:disabled) {
+  background-color: #1a91da;
+}
+
+.post-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.tweets-container {
+  flex: 1;
+}
+
+.tweet {
+  display: flex;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgb(239, 243, 244);
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.tweet:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.tweet-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #1da1f2;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.tweet-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.tweet-header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+
+.tweet-author {
+  font-weight: 700;
+  color: #0f1419;
+  font-size: 15px;
+}
+
+.tweet-handle {
+  color: rgb(110, 118, 125);
+  font-size: 15px;
+}
+
+.tweet-dot {
+  color: rgb(110, 118, 125);
+}
+
+.tweet-time {
+  color: rgb(110, 118, 125);
+  font-size: 13px;
+}
+
+.tweet-text {
+  margin: 0 0 12px 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #0f1419;
+  word-wrap: break-word;
+}
+
+.tweet-image {
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: 12px;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.tweet-actions {
+  display: flex;
+  justify-content: space-between;
+  max-width: 425px;
+  margin-top: 12px;
+  color: rgb(110, 118, 125);
+  font-size: 13px;
+}
+
+.action-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.action-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.action-btn:hover {
+  background-color: rgba(29, 161, 242, 0.1);
+  color: #1da1f2;
+}
+
+.action-count {
+  font-size: 13px;
+  color: rgb(110, 118, 125);
+}
+
+.tweet:hover .action-count {
+  color: #1da1f2;
+}
